@@ -1,8 +1,8 @@
 FROM       ubuntu:14.04
-MAINTAINER Nate Jones <nate@endot.org>
+MAINTAINER Bradon Kanyid <bradon@kanyid.org>
 
 RUN apt-get update
-RUN apt-get install software-properties-common language-pack-en -y
+RUN apt-get install software-properties-common language-pack-en openssh-server mosh tmux -y
 RUN add-apt-repository ppa:nesthib/weechat-stable -y
 ADD bitlbee.key /tmp/bitlbee.key
 RUN apt-key add /tmp/bitlbee.key
